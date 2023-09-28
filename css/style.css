@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root{
+    /* colors */
+    --Dark_cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Very_dark_blue: hsl(212, 21%, 14%);
+    --Dark_grayish_blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+
+    /* paragraph */
+    --body: 14px;
+
+    /* font */
+    --fontFraunces: 'Fraunces', serif;
+    --fontMontserrat: 'Montserrat', sans-serif;
+
+    /* layout */
+    --layoutMobile: 375px;
+    --layaoutDesktop: 1440px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: var(--Cream);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: var(--fontFraunces);
+}
+
+img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.container{
+    max-width: 550px;
+    margin: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+.content{
+    padding: 25px;
+    background-color: white;
+}
+
+.content h4{
+    font-family: var(--fontMontserrat);
+    letter-spacing: 2px;
+    color: var(--Dark_grayish_blue);
+    font-weight: 500;
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+
+.content h1{
+    font-weight: 600;
+    font-size: 35px;
+    color: var(--Very_dark_blue);
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.content > p{
+    font-family: var(--fontMontserrat);
+    color: var(--Dark_grayish_blue);
+    font-size: 14px;
+}
+
+.price{
+    margin: 20px 0px;
+    display: flex;
+    align-items: center;
+}
+
+.price_discount{
+    font-size: 30px;
+    letter-spacing: 1px;
+    color: var(--Dark_cyan);
+    margin-right: 20px;
+}
+
+.price_normal{
+    font-size: 10px;
+    font-family: var(--fontMontserrat);
+    color: var(--Dark_grayish_blue);
+    text-decoration: line-through;
+}
+
+.btn{
+    padding: 10px 0px;
+    border-radius: 10px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+
+.btn_car{
+    display: flex;
+    gap: 10px;
+    background-color: var(--Dark_cyan);
+}
+
+.btn_car p,
+.btn_car ion-icon{
+    color: var(--White);
+    font-weight: 700;
+}
+
+@media (max-width: 375px) {
+    .container{
+        max-width: 400px;
+    }
+
+    .contentImage{
+        width: 100%;
+        height: 200px;
+    }
+
+    .container{
+        grid-template-columns: 1fr;
+        margin: 20px;
+    }
+}
